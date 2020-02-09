@@ -14,6 +14,6 @@ namespace Soccer.Web.Data
 
         }
 
-        DbSet<TeamEntity> Teams { get; set; }
+        public DbSet<TeamEntity> Teams { get; set; }
     }
 }
