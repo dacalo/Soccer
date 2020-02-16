@@ -8,29 +8,30 @@ namespace Soccer.Web.Data.Entities
     {
         public int Id { get; set; }
 
-        [MaxLength(50, ErrorMessage = "The {0} field can not have more than {1} characters.")]
-        [Required(ErrorMessage = "The field {0} is mandatory.")]
+        [Display(Name = "Nombre")]
+        [MaxLength(50, ErrorMessage = "El campo {0} no puede tener más de {1} caracteres.")]
+        [Required(ErrorMessage = "El campo {0} es obligatorio.")]
         public string Name { get; set; }
 
         [DataType(DataType.DateTime)]
-        [Display(Name = "Start Date")]
+        [Display(Name = "Fecha de Inicio")]
         [DisplayFormat(DataFormatString = "{0:yyyy/MM/dd}", ApplyFormatInEditMode = false)]
         public DateTime StartDate { get; set; }
 
-        [Display(Name = "Start Date")]
+        [Display(Name = "Fecha de Inicio")]
         [DisplayFormat(DataFormatString = "{0:yyyy/MM/dd}", ApplyFormatInEditMode = false)]
         public DateTime StartDateLocal => StartDate.ToLocalTime();
 
         [DataType(DataType.DateTime)]
-        [Display(Name = "End Date")]
+        [Display(Name = "Fecha de Término")]
         [DisplayFormat(DataFormatString = "{0:yyyy/MM/dd}", ApplyFormatInEditMode = false)]
         public DateTime EndDate { get; set; }
 
-        [Display(Name = "End Date")]
+        [Display(Name = "Fecha de Término")]
         [DisplayFormat(DataFormatString = "{0:yyyy/MM/dd}", ApplyFormatInEditMode = false)]
         public DateTime EndDateLocal => EndDate.ToLocalTime();
 
-        [Display(Name = "Is Active?")]
+        [Display(Name = "Está Activo?")]
         public bool IsActive { get; set; }
 
         [Display(Name = "Logo")]

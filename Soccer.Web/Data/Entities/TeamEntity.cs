@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace Soccer.Web.Data.Entities
 {
@@ -10,8 +6,9 @@ namespace Soccer.Web.Data.Entities
     {
         public int Id { get; set; }
         
-        [MaxLength(100, ErrorMessage = "The {0} field can not have more than {1} characters.")]
-        [Required(ErrorMessage = "The field {0} is mandatory.")]
+        [Display(Name = "Nombre")]
+        [MaxLength(100, ErrorMessage = "El campo {0} no puede tener más de {1} caracteres.")]
+        [Required(ErrorMessage = "El campo {0} es obligatorio.")]
         public string Name { get; set; }
         
         [Display(Name = "Logo")]
