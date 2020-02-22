@@ -11,7 +11,10 @@ namespace Soccer.Web.Helpers
         {
             string guid = Guid.NewGuid().ToString();
             string file = $"{guid}.jpg";
-            string path = Path.Combine(Directory.GetCurrentDirectory(), $"wwwroot\\images\\{folder}", file);
+            string path = Path.Combine(
+                Directory.GetCurrentDirectory(), 
+                $"wwwroot\\images\\{folder}", 
+                file);
             using(FileStream stream = new FileStream(path, FileMode.Create))
             {
                 await imageFile.CopyToAsync(stream);
