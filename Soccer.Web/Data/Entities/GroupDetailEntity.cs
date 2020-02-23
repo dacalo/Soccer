@@ -5,7 +5,6 @@ namespace Soccer.Web.Data.Entities
     public class GroupDetailEntity
     {
         public int Id { get; set; }
-        public TeamEntity Team { get; set; }
         
         [Display(Name = "Partidos Jugados")]
         public int MatchesPlayed { get; set; }
@@ -32,5 +31,6 @@ namespace Soccer.Web.Data.Entities
         public int GoalDifference => GoalsFor - GoalsAgainst;
 
         public GroupEntity Group { get; set; }
+        public TeamEntity Team { get; set; }
     }
 }
