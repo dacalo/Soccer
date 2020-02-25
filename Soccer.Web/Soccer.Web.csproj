@@ -21,10 +21,6 @@
     <ProjectReference Include="..\Soccer.Common\Soccer.Common.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Controllers\API\" />
-  </ItemGroup>
-
 
 
 </Project>
