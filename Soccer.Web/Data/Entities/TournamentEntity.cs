@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Soccer.Common.Helpers;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
@@ -36,6 +37,14 @@ namespace Soccer.Web.Data.Entities
 
         [Display(Name = "Logo")]
         public string LogoPath { get; set; }
+
+        [Display(Name = "Logo")]
+        public string LogoFullPath => string.IsNullOrEmpty(LogoPath)
+            ? Constants.Path.PathNoImage
+            : Constants.URL_BASE + LogoPath.Substring(1);
+        //public string LogoFullPath => string.IsNullOrEmpty(LogoPath)
+        //    ? "https://SoccerWeb0.azurewebsites.net//images/noimage.png"
+        //    : $"https://SoccerWeb0.azurewebsites.net{LogoPath.Substring(1)}";
 
         public ICollection<GroupEntity> Groups { get; set; }
     }
