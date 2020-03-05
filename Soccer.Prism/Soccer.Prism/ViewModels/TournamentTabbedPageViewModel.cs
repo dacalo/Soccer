@@ -16,11 +16,8 @@ namespace Soccer.Prism.ViewModels
         {
             base.OnNavigatedTo(parameters);
 
-            if (parameters.ContainsKey("tournament"))
-            {
-                _tournament = parameters.GetValue<TournamentResponse>("tournament");
-                Title = _tournament.Name;
-            }
+            _tournament = parameters.GetValue<TournamentResponse>("tournament");
+            Title = _tournament.Name;
         }
     }
 }
