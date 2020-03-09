@@ -2,6 +2,7 @@
 using Soccer.Common.Helpers;
 using Soccer.Common.Models;
 using Soccer.Common.Services;
+using Soccer.Prism.Helpers;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -12,6 +13,7 @@ namespace Soccer.Prism.ViewModels
         private readonly IApiService _apiService;
         private readonly INavigationService _navigationService;
         private List<TournamentItemViewModel> _tournaments;
+        private bool _isRunning;
 
         public TournamentsPageViewModel(
             INavigationService navigationService,
@@ -29,21 +31,34 @@ namespace Soccer.Prism.ViewModels
             set => SetProperty(ref _tournaments, value);
         }
 
+        public bool IsRunning 
+        {
+            get => _isRunning;
+            set => SetProperty(ref _isRunning, value);
+        }
+
         private async void LoadTournamentsAsync()
         {
             //string url = App.Current.Resources["UrlAPI"].ToString();
+            IsRunning = true;
             string url = Constants.URL_BASE;
+            var connection = await _apiService.CheckConnectionAsync(url);
+            if (!connection)
+            {
+                IsRunning = false;
+                await App.Current.MainPage.DisplayAlert(Languages.Error, Languages.ConnectionError, Languages.Accept);
+                return;
+            }
+
             Response response = await _apiService.GetListAsync<TournamentResponse>(
-                url,
-                Constants.SERVICE_PREFIX,
-                "/Tournaments");
+            url,
+            Constants.SERVICE_PREFIX,
+            "/Tournaments");
+            IsRunning = false;
 
             if (!response.IsSuccess)
             {
-                await App.Current.MainPage.DisplayAlert(
-                    "Error",
-                    response.Message,
-                    "Accept");
+                await App.Current.MainPage.DisplayAlert(Languages.Error, response.Message, Languages.Accept);
                 return;
             }
 
