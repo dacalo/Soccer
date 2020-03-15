@@ -74,7 +74,7 @@ namespace Soccer.Web.Data
             string address,
             UserType userType)
         {
-            UserEntity user = await _userHelper.GetUserByEmailAsync(email);
+            UserEntity user = await _userHelper.GetUserAsync(email);
             if (user == null)
             {
                 user = new UserEntity
@@ -92,6 +92,9 @@ namespace Soccer.Web.Data
 
                 await _userHelper.AddUserAsync(user, "123456");
                 await _userHelper.AddUserToRoleAsync(user, userType.ToString());
+
+                var token = await _userHelper.GenerateEmailConfirmationTokenAsync(user);
+                await _userHelper.ConfirmEmailAsync(user, token);
             }
 
             return user;

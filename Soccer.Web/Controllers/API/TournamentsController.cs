@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace Soccer.Web.Controllers.API
 {
+
     [Route("api/[controller]")]
     [ApiController]
     public class TournamentsController : ControllerBase
