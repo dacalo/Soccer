@@ -221,7 +221,7 @@ namespace Soccer.Web.Helpers
             return list;
         }
 
-        private UserResponse ToUserResponse(UserEntity user)
+        public UserResponse ToUserResponse(UserEntity user)
         {
             if (user == null)
             {
@@ -239,7 +239,8 @@ namespace Soccer.Web.Helpers
                 PhoneNumber = user.PhoneNumber,
                 PicturePath = user.PicturePath,
                 Team = ToTeamResponse(user?.Team),
-                UserType = user.UserType
+                UserType = user.UserType,
+                LoginType = user.LoginType
             };
         }
 
@@ -283,8 +284,6 @@ namespace Soccer.Web.Helpers
                 Visitor = ToTeamResponse(matchEntity.Visitor)
             };
         }
-
-
 
     }
 }

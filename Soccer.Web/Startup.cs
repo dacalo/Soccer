@@ -79,6 +79,7 @@ namespace Soccer.Web
             services.AddScoped<ICombosHelper, CombosHelper>();
             services.AddScoped<IUserHelper, UserHelper>();
             services.AddScoped<IMailHelper, MailHelper>();
+            services.AddScoped<IMatchHelper, MatchHelper>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

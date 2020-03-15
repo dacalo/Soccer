@@ -31,6 +31,9 @@ namespace Soccer.Web.Data.Entities
         [Display(Name = "Tipo de Usuario")]
         public UserType UserType { get; set; }
 
+        [Display(Name = "Tipo de Inicio de Sesión")]
+        public LoginType LoginType { get; set; }
+
         [Display(Name = "Nombre Completo")]
         public string FullName => $"{FirstName} {LastName}";
 
