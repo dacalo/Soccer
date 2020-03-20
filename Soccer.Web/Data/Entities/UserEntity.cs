@@ -2,6 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using Soccer.Common.Enums;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Soccer.Web.Data.Entities
 {
@@ -39,6 +40,9 @@ namespace Soccer.Web.Data.Entities
 
         [Display(Name = "Nombre Completo con RFC")]
         public string FullNameWithRFC => $"{FirstName} {LastName} - {RFC}";
+
+        [Display(Name = "Puntos")]
+        public int Points => Predictions == null ? 0 : Predictions.Sum(p => p.Points);
 
         [Display(Name = "Equipo Favorito")]
         public TeamEntity Team { get; set; }

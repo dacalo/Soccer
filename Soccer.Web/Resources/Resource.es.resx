@@ -118,46 +118,47 @@
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
     <data name="UserAlreadyExists" xml:space="preserve">
-    <value>User already exists.</value>
+    <value>El usuario ya existe.</value>
   </data>
     <data name="ConfirmEmail" xml:space="preserve">
-    <value>Confirm Email</value>
+    <value>Confirmar correo electrónico</value>
   </data>
     <data name="ConfirmEmailSubject" xml:space="preserve">
-    <value>To allow the user, please click on this link:</value>
+    <value>Para habliitar al usuario, haga clic en este enlace:</value>
   </data>
     <data name="ConfirmEmailMessage" xml:space="preserve">
-    <value>A Confirmation email was sent. Please confirm your account and log into the App.</value>
+    <value>Se envió un correo electrónico de confirmación. ¡Confirme su cuenta e inicie sesión en la aplicación!</value>
   </data>
     <data name="UserDoesntExists" xml:space="preserve">
-    <value>User doesn't exists.</value>
+    <value>El usuario no existe</value>
   </data>
     <data name="RecoverPassword" xml:space="preserve">
-    <value> Recover Password</value>
+    <value>Recuperar contraseña</value>
   </data>
     <data name="RecoverPasswordSubject" xml:space="preserve">
-    <value>To reset the password click in this link:</value>
+    <value>Para restablecer la contraseña, haga clic en este enlace:</value>
   </data>
     <data name="RecoverPasswordMessage" xml:space="preserve">
-    <value>An email with instructions to change the password was sent.</value>
+    <value>Se envió un email con instrucciones sobre cómo cambiar la contraseña.</value>
   </data>
     <data name="IncorrectCurrentPassword" xml:space="preserve">
-    <value>Incorrect current password.</value>
+    <value>Contraseña actual incorrecta.</value>
   </data>
     <data name="PasswordChangedSuccess" xml:space="preserve">
-    <value>The password was changed successfully!</value>
+    <value>Su contraseña ha sido modificada con éxito.</value>
   </data>
     <data name="MatchDoesntExists" xml:space="preserve">
-    <value>Match doesn't exists.</value>
+    <value>El partido no existe.</value>
   </data>
     <data name="MatchAlreadyClosed" xml:space="preserve">
-    <value>Match is already closed.</value>
+    <value>El partido ya está cerrado.</value>
   </data>
     <data name="MatchAlreadyStarts" xml:space="preserve">
-    <value>You cannot record the prediction, because the match has already started.</value>
+    <value>No puedes grabar la predicción porque la partida ya ha comenzado.</value>
   </data>
     <data name="TournamentDoesntExists" xml:space="preserve">
-    <value>Tournament doesn't exists.</value>
+    <value>El torneo no existe.</value>
   </data>
+
 
 </root>

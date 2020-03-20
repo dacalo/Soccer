@@ -509,7 +509,7 @@ namespace Soccer.Web.Controllers
             if (ModelState.IsValid)
             {
                 await _matchHelper.CloseMatchAsync(model.MatchId, model.GoalsLocal.Value, model.GoalsVisitor.Value);
-                return RedirectToAction($"{nameof(DetailsGroup)}/{model.GroupId}");
+                return RedirectToAction("DetailsGroup", new{ id = model.GroupId});
             }
 
             model.Group = await _context.Groups.FindAsync(model.GroupId);

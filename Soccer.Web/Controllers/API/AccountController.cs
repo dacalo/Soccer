@@ -123,29 +123,33 @@ namespace Soccer.Web.Controllers.API
                 });
             }
 
+            CultureInfo cultureInfo = new CultureInfo(request.CultureInfo);
+            Resource.Culture = cultureInfo;
+
             var user = await _userHelper.GetUserAsync(request.Email);
             if (user == null)
             {
                 return BadRequest(new Response
                 {
                     IsSuccess = false,
-                    Message = "Este correo no está asginado a ningun usuario."
-                });
+                    Message = Resource.UserDoesntExists
+                }); ;
             }
 
             var myToken = await _userHelper.GeneratePasswordResetTokenAsync(user);
             var link = Url.Action("ResetPassword", "Account", new { token = myToken }, protocol: HttpContext.Request.Scheme);
-            _mailHelper.SendMail(request.Email, "Reestablecer Contraseña", $"<h1>Recuperar Contraseña</h1>" +
-                $"Para reestablecer la contraseña da clic en éste enlace:</br></br>" +
-                $"<a href = \"{link}\">Reestablecer Contraseña</a>");
+            _mailHelper.SendMail(request.Email, Resource.RecoverPassword, $"<h1>{Resource.RecoverPassword}</h1>" +
+                $"{Resource.RecoverPasswordSubject}</br></br>" +
+                $"<a href = \"{link}\">{Resource.RecoverPassword}</a>");
 
             return Ok(new Response
             {
                 IsSuccess = true,
-                Message = "Un correo con las instrucciones para el cambio de contraseña han sido enviadas."
-            });
+                Message = Resource.RecoverPasswordMessage
+            }); ;
         }
 
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         [HttpPut]
         public async Task<IActionResult> PutUser([FromBody] UserRequest request)
         {
