@@ -1,8 +1,11 @@
 ﻿using Newtonsoft.Json;
+using Prism.Commands;
 using Prism.Navigation;
 using Soccer.Common.Helpers;
 using Soccer.Common.Models;
+using Soccer.Common.Services;
 using Soccer.Prism.Helpers;
+using Soccer.Prism.Views;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -13,9 +16,16 @@ namespace Soccer.Prism.ViewModels
     {
         private readonly INavigationService _navigationService;
         private UserResponse _user;
+        private DelegateCommand _modifyUserCommand;
+        private readonly IApiService _apiService;
+        private static SoccerMasterDetailPageViewModel _instance;
 
-        public SoccerMasterDetailPageViewModel(INavigationService navigationService) : base(navigationService)
+        public SoccerMasterDetailPageViewModel(
+            INavigationService navigationService,
+            IApiService apiService) : base(navigationService)
         {
+            _instance = this;
+            _apiService = apiService;
             _navigationService = navigationService;
             LoadUser();
             LoadMenus();
@@ -28,6 +38,8 @@ namespace Soccer.Prism.ViewModels
         }
 
         public ObservableCollection<MenuItemViewModel> Menus { get; set; }
+
+        public DelegateCommand ModifyUserCommand => _modifyUserCommand ?? (_modifyUserCommand = new DelegateCommand(ModifyUserAsync));
 
         private void LoadMenus()
         {
@@ -80,6 +92,40 @@ namespace Soccer.Prism.ViewModels
             {
                 User = JsonConvert.DeserializeObject<UserResponse>(Settings.User);
             }
+        }
+
+        private async void ModifyUserAsync()
+        {
+            await _navigationService.NavigateAsync($"/SoccerMasterDetailPage/NavigationPage/{nameof(ModifyUserPage)}");
+        }
+
+        public static SoccerMasterDetailPageViewModel GetInstance()
+        {
+            return _instance;
+        }
+
+        public async void ReloadUser()
+        {
+            string url = App.Current.Resources["UrlAPI"].ToString();
+            string url2 = "https:///www.google.com";
+            bool connection = await _apiService.CheckConnectionAsync(url2);
+            if (!connection)
+            {
+                return;
+            }
+
+            UserResponse user = JsonConvert.DeserializeObject<UserResponse>(Settings.User);
+            TokenResponse token = JsonConvert.DeserializeObject<TokenResponse>(Settings.Token);
+            EmailRequest emailRequest = new EmailRequest
+            {
+                CultureInfo = Languages.Culture,
+                Email = user.Email
+            };
+
+            Response response = await _apiService.GetUserByEmail(url, "api", "/Account/GetUserByEmail", "bearer", token.Token, emailRequest);
+            UserResponse userResponse = (UserResponse)response.Result;
+            Settings.User = JsonConvert.SerializeObject(userResponse);
+            LoadUser();
         }
 
     }

@@ -282,4 +282,85 @@
   <data name="FromGallery" xml:space="preserve">
     <value>Elegir de la galería</value>
   </data>
+  <data name="PasswordRecover" xml:space="preserve">
+    <value>Recuperar la contraseña</value>
+  </data>
+  <data name="ForgotPassword" xml:space="preserve">
+    <value>¿Olvidaste tu contraseña?</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Guardar</value>
+  </data>
+  <data name="ChangePassword" xml:space="preserve">
+    <value>Cambiar contraseña</value>
+  </data>
+  <data name="UserUpdated" xml:space="preserve">
+    <value>Usuario actualizado</value>
+  </data>
+
+  <data name="ConfirmNewPassword" xml:space="preserve">
+    <value>Confirmar nueva clave</value>
+  </data>
+  <data name="ConfirmNewPasswordError" xml:space="preserve">
+    <value>Ingresa la confirmación de tu clave.</value>
+  </data>
+  <data name="ConfirmNewPasswordError2" xml:space="preserve">
+    <value>La clave y la confirmación no coinciden.</value>
+  </data>
+  <data name="ConfirmNewPasswordPlaceHolder" xml:space="preserve">
+    <value>Ingrese la confirmación de clave...</value>
+  </data>
+  <data name="CurrentPassword" xml:space="preserve">
+    <value>Clave actual</value>
+  </data>
+  <data name="CurrentPasswordError" xml:space="preserve">
+    <value>Debe introducir su clave actual.</value>
+  </data>
+  <data name="CurrentPasswordPlaceHolder" xml:space="preserve">
+    <value>Escriba la clave actual.</value>
+  </data>
+  <data name="NewPassword" xml:space="preserve">
+    <value>Clave nueva</value>
+  </data>
+  <data name="NewPasswordError" xml:space="preserve">
+    <value>Debe ingresar una nueva clave de al menos seis caracteres.</value>
+  </data>
+  <data name="NewPasswordPlaceHolder" xml:space="preserve">
+    <value>Escribe la nueva clave...</value>
+  </data>
+  
+  <data name="SelectTournament" xml:space="preserve">
+    <value>Selecciona un torneo</value>
+  </data>
+  <data name="PredictionsFor" xml:space="preserve">
+    <value>Pronósticos para</value>
+  </data>
+  <data name="IsUpdated" xml:space="preserve">
+    <value>Listo?</value>
+  </data>
+  <data name="Update" xml:space="preserve">
+    <value>Actualizar</value>
+  </data>
+  <data name="LocalGoalsError" xml:space="preserve">
+    <value>Debe ingresar los goles del local.</value>
+  </data>
+  <data name="VisitorGoalsError" xml:space="preserve">
+    <value>Debe ingresar los goles del visitante.</value>
+  </data>
+  <data name="MatchAlreadyStarts" xml:space="preserve">
+    <value>No puedes grabar la predicción porque la partida ya ha comenzado.</value>
+  </data>
+  <data name="Open" xml:space="preserve">
+    <value>Abiertos</value>
+  </data>
+  <data name="Real" xml:space="preserve">
+    <value>Real</value>
+  </data>
+  <data name="Points" xml:space="preserve">
+    <value>Puntos</value>
+  </data>
+  <data name="Prediction" xml:space="preserve">
+    <value>Predicción</value>
+  </data>
+
 </root>
