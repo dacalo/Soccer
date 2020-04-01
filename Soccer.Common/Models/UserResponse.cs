@@ -20,10 +20,14 @@ namespace Soccer.Common.Models
 
         public string PicturePath { get; set; }
 
+        //public string PictureFullPath => string.IsNullOrEmpty(PicturePath)
+        //    ? "https://SoccerWeb0.azurewebsites.net//images/noimage.png"
+        //    : LoginType == LoginType.Soccer ? $"https://SoccerWeb0.azurewebsites.net{PicturePath.Substring(1)}" : PicturePath;
+
         public string PictureFullPath => string.IsNullOrEmpty(PicturePath)
-            ? "https://SoccerWeb0.azurewebsites.net//images/noimage.png"
-            : LoginType == LoginType.Soccer ? $"https://SoccerWeb0.azurewebsites.net{PicturePath.Substring(1)}" : PicturePath;
-        
+            ? "http://10.1.114.74:84//images/noimage.png"
+            : LoginType == LoginType.Soccer ? $"http://10.1.114.74:84{PicturePath.Substring(1)}" : PicturePath;
+
         public LoginType LoginType { get; set; }
         public UserType UserType { get; set; }
 
@@ -32,5 +36,6 @@ namespace Soccer.Common.Models
         public string FullName => $"{FirstName} {LastName}";
 
         public string FullNameWithDocument => $"{FirstName} {LastName} - {RFC}";
+
     }
 }

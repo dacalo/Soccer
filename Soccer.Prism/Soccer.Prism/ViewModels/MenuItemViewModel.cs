@@ -1,6 +1,8 @@
 ﻿using Soccer.Common.Models;
 using Prism.Commands;
 using Prism.Navigation;
+using Soccer.Common.Helpers;
+using Newtonsoft.Json;
 
 namespace Soccer.Prism.ViewModels
 {
@@ -18,6 +20,13 @@ namespace Soccer.Prism.ViewModels
 
         private async void SelectMenuAsync()
         {
+            if (PageName == "LoginPage" && Settings.IsLogin)
+            {
+                Settings.IsLogin = false;
+                Settings.User = null;
+                Settings.Token = null;
+            }
+
             await _navigationService.NavigateAsync($"/SoccerMasterDetailPage/NavigationPage/{PageName}");
         }
     }

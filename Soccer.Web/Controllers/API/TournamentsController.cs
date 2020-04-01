@@ -25,7 +25,7 @@ namespace Soccer.Web.Controllers.API
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetTeams()
+        public async Task<IActionResult> GetTournaments()
         {
             List<TournamentEntity> tournaments = await _context.Tournaments
                 .Include(t => t.Groups)

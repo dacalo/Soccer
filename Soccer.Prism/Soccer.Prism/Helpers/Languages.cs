@@ -10,9 +10,11 @@ namespace Soccer.Prism.Helpers
         {
             var ci = DependencyService.Get<ILocalize>().GetCurrentCultureInfo();
             Resource.Culture = ci;
+            Culture = ci.Name;
             DependencyService.Get<ILocalize>().SetLocale(ci);
         }
 
+        public static string Culture { get; set; }
         public static string Accept => Resource.Accept;
 
         public static string ConnectionError => Resource.ConnectionError;
@@ -47,6 +49,66 @@ namespace Soccer.Prism.Helpers
         public static string Open => Resource.Open;
         public static string Closed => Resource.Closed;
         public static string Groups => Resource.Groups;
+
+        public static string Email => Resource.Email;
+
+        public static string EmailPlaceHolder => Resource.EmailPlaceHolder;
+
+        public static string EmailError => Resource.EmailError;
+
+        public static string Password => Resource.Password;
+
+        public static string PasswordError => Resource.PasswordError;
+
+        public static string PasswordPlaceHolder => Resource.PasswordPlaceHolder;
+
+        public static string Register => Resource.Register;
+        public static string LoginError => Resource.LoginError;
+        public static string Logout => Resource.Logout;
+
+        public static string RFC => Resource.RFC;
+        public static string RFCPlaceHolder => Resource.RFCPlaceHolder;
+        public static string RFCError => Resource.RFCError;
+
+        public static string FirstNameError => Resource.FirstNameError;
+
+        public static string LastNameError => Resource.LastNameError;
+
+        public static string Address => Resource.Address;
+
+        public static string AddressError => Resource.AddressError;
+
+        public static string AddressPlaceHolder => Resource.AddressPlaceHolder;
+
+        public static string Phone => Resource.Phone;
+
+        public static string PhoneError => Resource.PhoneError;
+
+        public static string PhonePlaceHolder => Resource.PhonePlaceHolder;
+
+        public static string FavoriteTeam => Resource.FavoriteTeam;
+
+        public static string FavoriteTeamError => Resource.FavoriteTeamError;
+
+        public static string FavoriteTeamPlaceHolder => Resource.FavoriteTeamPlaceHolder;
+
+        public static string PasswordConfirm => Resource.PasswordConfirm;
+
+        public static string PasswordConfirmError1 => Resource.PasswordConfirmError1;
+
+        public static string PasswordConfirmError2 => Resource.PasswordConfirmError2;
+
+        public static string PasswordConfirmPlaceHolder => Resource.PasswordConfirmPlaceHolder;
+        
+        public static string Ok => Resource.Ok;
+
+        public static string PictureSource => Resource.PictureSource;
+
+        public static string Cancel => Resource.Cancel;
+
+        public static string FromCamera => Resource.FromCamera;
+
+        public static string FromGallery => Resource.FromGallery;
 
     }
 }

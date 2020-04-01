@@ -117,35 +117,35 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Error" xml:space="preserve">
-    <value>Error</value>
-  </data>
   <data name="Accept" xml:space="preserve">
     <value>Aceptar</value>
   </data>
   <data name="ConnectionError" xml:space="preserve">
     <value>Compruebe la conexión a Internet</value>
   </data>
-  <data name="MP" xml:space="preserve">
-    <value>PJ</value>
-  </data>
-  <data name="MW" xml:space="preserve">
-    <value>PG</value>
-  </data>
-  <data name="MT" xml:space="preserve">
-    <value>PE</value>
-  </data>
-  <data name="ML" xml:space="preserve">
-    <value>PP</value>
-  </data>
-  <data name="PO" xml:space="preserve">
-    <value>PU</value>
-  </data>
-  <data name="GD" xml:space="preserve">
-    <value>DF</value>
+  <data name="Error" xml:space="preserve">
+    <value>Error</value>
   </data>
   <data name="Name" xml:space="preserve">
     <value>Nombre</value>
+  </data>
+  <data name="MP" xml:space="preserve">
+    <value>MP</value>
+  </data>
+  <data name="MW" xml:space="preserve">
+    <value>MW</value>
+  </data>
+  <data name="MT" xml:space="preserve">
+    <value>MT</value>
+  </data>
+  <data name="ML" xml:space="preserve">
+    <value>ml</value>
+  </data>
+  <data name="PO" xml:space="preserve">
+    <value>PC</value>
+  </data>
+  <data name="GD" xml:space="preserve">
+    <value>ZR</value>
   </data>
   <data name="Loading" xml:space="preserve">
     <value>Cargando...</value>
@@ -166,31 +166,31 @@
     <value>Iniciar sesión</value>
   </data>
   <data name="Open" xml:space="preserve">
-    <value>Abiertos</value>
+    <value>Abrir</value>
   </data>
   <data name="Closed" xml:space="preserve">
-    <value>Cerrados</value>
+    <value>Cerrar</value>
   </data>
   <data name="Groups" xml:space="preserve">
     <value>Grupos</value>
   </data>
   <data name="Email" xml:space="preserve">
-    <value>Email</value>
+    <value>Correo electrónico</value>
   </data>
   <data name="EmailPlaceHolder" xml:space="preserve">
-    <value>Ingrese su email</value>
+    <value>Introduce tu correo electrónico</value>
   </data>
   <data name="EmailError" xml:space="preserve">
-    <value>Debes ingresar un correo electrónico...</value>
+    <value>Debes ingresar un correo electrónico.</value>
   </data>
   <data name="Password" xml:space="preserve">
-    <value>Contraseña</value>
+    <value>Contraseña:</value>
   </data>
   <data name="PasswordPlaceHolder" xml:space="preserve">
-    <value>Entra tu contraseña...</value>
+    <value>Escriba la contraseña.</value>
   </data>
   <data name="PasswordError" xml:space="preserve">
-    <value>Debe escribir una contraseña.</value>
+    <value>Debe especificar una contraseña.</value>
   </data>
   <data name="Register" xml:space="preserve">
     <value>Registrar</value>
@@ -200,6 +200,15 @@
   </data>
   <data name="Logout" xml:space="preserve">
     <value>Cerrar sesión</value>
+  </data>
+  <data name="RFC" xml:space="preserve">
+    <value>RFC</value>
+  </data>
+  <data name="RFCPlaceHolder" xml:space="preserve">
+    <value>Ingrese su RFC...</value>
+  </data>
+  <data name="RFCError" xml:space="preserve">
+    <value>Debe ingresar un RFC.</value>
   </data>
   <data name="FirstName" xml:space="preserve">
     <value>Nombres</value>
@@ -261,15 +270,6 @@
   <data name="Ok" xml:space="preserve">
     <value>Ok</value>
   </data>
-  <data name="RFC" xml:space="preserve">
-    <value>RFC</value>
-  </data>
-  <data name="RFCError" xml:space="preserve">
-    <value>Debe ingresar un RFC.</value>
-  </data>
-  <data name="RFCPlaceHolder" xml:space="preserve">
-    <value>Ingrese su RFC...</value>
-  </data>
   <data name="PictureSource" xml:space="preserve">
     <value>¿Dónde quieres tomar la foto?</value>
   </data>
@@ -280,6 +280,6 @@
     <value>"Desde la cámara"</value>
   </data>
   <data name="FromGallery" xml:space="preserve">
-    <value>Elegir de la galería</value>
+    <value>De la galería</value>
   </data>
 </root>
