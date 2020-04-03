@@ -294,10 +294,6 @@
   <data name="ChangePassword" xml:space="preserve">
     <value>Cambiar contraseña</value>
   </data>
-  <data name="UserUpdated" xml:space="preserve">
-    <value>Usuario actualizado</value>
-  </data>
-
   <data name="ConfirmNewPassword" xml:space="preserve">
     <value>Confirmar nueva clave</value>
   </data>
@@ -328,7 +324,6 @@
   <data name="NewPasswordPlaceHolder" xml:space="preserve">
     <value>Escribe la nueva clave...</value>
   </data>
-
   <data name="SelectTournament" xml:space="preserve">
     <value>Selecciona un torneo</value>
   </data>
@@ -350,9 +345,6 @@
   <data name="MatchAlreadyStarts" xml:space="preserve">
     <value>No puedes grabar la predicción porque la partida ya ha comenzado.</value>
   </data>
-  <data name="Open" xml:space="preserve">
-    <value>Abiertos</value>
-  </data>
   <data name="Real" xml:space="preserve">
     <value>Real</value>
   </data>
@@ -362,5 +354,7 @@
   <data name="Prediction" xml:space="preserve">
     <value>Predicción</value>
   </data>
-
+  <data name="UserUpdated" xml:space="preserve">
+    <value>El usuario se actualizó correctamente.</value>
+  </data>
 </root>

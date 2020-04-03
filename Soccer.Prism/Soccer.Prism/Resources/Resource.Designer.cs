@@ -763,7 +763,7 @@ namespace Soccer.Prism.Resources {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a User Updated.
+        ///   Busca una cadena traducida similar a The user was updated sucessfull.
         /// </summary>
         public static string UserUpdated {
             get {
