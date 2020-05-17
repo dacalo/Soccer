@@ -157,6 +157,7 @@ namespace Soccer.Prism.Helpers
         public static string SelectTournament => Resource.SelectTournament;
 
         public static string PredictionsFor => Resource.PredictionsFor;
+        public static string Pending => Resource.Pending;
 
     }
 }

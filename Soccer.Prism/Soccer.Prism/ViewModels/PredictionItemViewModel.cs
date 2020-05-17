@@ -30,9 +30,7 @@ namespace Soccer.Prism.ViewModels
             }
 
             string url = App.Current.Resources["UrlAPI"].ToString();
-            string url2 = "https://www.google.com";
-            bool connection = await _apiService.CheckConnectionAsync(url2);
-            if (!connection)
+            if (!_apiService.CheckConnection())
             {
                 await App.Current.MainPage.DisplayAlert(Languages.Error, Languages.ConnectionError, Languages.Accept);
                 return;

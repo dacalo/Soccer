@@ -42,9 +42,7 @@ namespace Soccer.Prism.ViewModels
             //string url = App.Current.Resources["UrlAPI"].ToString();
             IsRunning = true;
             string url = Constants.URL_BASE;
-            string url2 = "https://www.google.com";
-            var connection = await _apiService.CheckConnectionAsync(url2);
-            if (!connection)
+            if (!_apiService.CheckConnection())
             {
                 IsRunning = false;
                 await App.Current.MainPage.DisplayAlert(Languages.Error, Languages.ConnectionError, Languages.Accept);

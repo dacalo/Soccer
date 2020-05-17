@@ -178,10 +178,10 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Syncfusion.Xamarin.SfBusyIndicator">
-      <Version>17.4.0.55</Version>
+      <Version>18.1.0.52</Version>
     </PackageReference>
     <PackageReference Include="Xam.Plugin.Media">
-      <Version>4.0.1.5</Version>
+      <Version>5.0.1</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.FFImageLoading.Forms">
       <Version>2.4.11.982</Version>
@@ -189,7 +189,7 @@
     <PackageReference Include="Xamarin.FFImageLoading.Transformations">
       <Version>2.4.11.982</Version>
     </PackageReference>
-    <PackageReference Include="Xamarin.Forms" Version="4.5.0.495" />
+    <PackageReference Include="Xamarin.Forms" Version="4.6.0.772" />
     <PackageReference Include="Prism.DryIoc.Forms" Version="7.2.0.1422" />
   </ItemGroup>
   <ItemGroup>

@@ -29,7 +29,6 @@ namespace Soccer.Prism.ViewModels
                 { "tournament", this }
             };
 
-            Settings.Tournament = JsonConvert.SerializeObject(this);
             await _navigationService.NavigateAsync(nameof(TournamentTabbedPage), parameters);
         }
 
@@ -40,7 +39,7 @@ namespace Soccer.Prism.ViewModels
                 { "tournament", this }
             };
 
-            await _navigationService.NavigateAsync(nameof(PredictionsForTournamentPage), parameters);
+            await _navigationService.NavigateAsync(nameof(PredictionsTabbedPage), parameters);
         }
 
     }

@@ -610,6 +610,15 @@ namespace Soccer.Prism.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Pending.
+        /// </summary>
+        public static string Pending {
+            get {
+                return ResourceManager.GetString("Pending", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Phone.
         /// </summary>
         public static string Phone {
@@ -655,7 +664,7 @@ namespace Soccer.Prism.Resources {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Points.
+        ///   Busca una cadena traducida similar a Ptos.
         /// </summary>
         public static string Points {
             get {

@@ -349,12 +349,15 @@
     <value>Real</value>
   </data>
   <data name="Points" xml:space="preserve">
-    <value>Puntos</value>
+    <value>Ptos</value>
   </data>
   <data name="Prediction" xml:space="preserve">
     <value>Predicción</value>
   </data>
   <data name="UserUpdated" xml:space="preserve">
     <value>El usuario se actualizó correctamente.</value>
+  </data>
+  <data name="Pending" xml:space="preserve">
+    <value>Pendiente</value>
   </data>
 </root>

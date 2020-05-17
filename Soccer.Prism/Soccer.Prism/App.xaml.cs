@@ -24,7 +24,7 @@ namespace Soccer.Prism
 
         protected override async void OnInitialized()
         {
-            SyncfusionLicenseProvider.RegisterLicense("MjE2NDYyQDMxMzcyZTM0MmUzMGNFaWZsVHJ1czNkcStXMktpbnBEa1R0OEF2SDRYd2hwQjNPeXVtTjdCSW89");
+            SyncfusionLicenseProvider.RegisterLicense("MjU4NTQ1QDMxMzgyZTMxMmUzMGh0Tk1yRlp6ZDE2YVNWM3N3MlE1UEIvSUE1QVpQekhBTmtCYXFFZ2tEVkk9");
             InitializeComponent();
 
             await NavigationService.NavigateAsync("/SoccerMasterDetailPage/NavigationPage/TournamentsPage");
@@ -51,6 +51,8 @@ namespace Soccer.Prism
             containerRegistry.RegisterForNavigation<RememberPasswordPage, RememberPasswordPageViewModel>();
             containerRegistry.RegisterForNavigation<ChangePasswordPage, ChangePasswordPageViewModel>();
             containerRegistry.RegisterForNavigation<PredictionsForTournamentPage, PredictionsForTournamentPageViewModel>();
+            containerRegistry.RegisterForNavigation<ClosedPredictionsForTournamentPage, ClosedPredictionsForTournamentPageViewModel>();
+            containerRegistry.RegisterForNavigation<PredictionsTabbedPage, PredictionsTabbedPageViewModel>();
         }
     }
 }
