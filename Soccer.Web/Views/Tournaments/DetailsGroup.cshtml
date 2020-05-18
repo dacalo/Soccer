@@ -41,9 +41,9 @@
             </dl>
         </div>
         <div class="col-md-4">
-            @if (!string.IsNullOrEmpty(Model.Tournament.LogoPath))
+            @if (!string.IsNullOrEmpty(Model.Tournament.LogoFullPath))
             {
-                <img src="@Url.Content(Model.Tournament.LogoPath)" alt="Image" style="width:150px;height:150px;max-width: 100%; height: auto;" />
+                <img src="@Url.Content(Model.Tournament.LogoFullPath)" alt="Image" style="width:150px;height:150px;max-width: 100%; height: auto;" />
             }
         </div>
     </div>
@@ -69,7 +69,7 @@
                         <thead>
                             <tr>
                                 <th>
-                                    @Html.DisplayNameFor(model => model.GroupDetails.FirstOrDefault().Team.LogoPath)
+                                    @Html.DisplayNameFor(model => model.GroupDetails.FirstOrDefault().Team.LogoFullPath)
                                 </th>
                                 <th>
                                     @Html.DisplayNameFor(model => model.GroupDetails.FirstOrDefault().Team.Name)
@@ -109,9 +109,9 @@
                             {
                                 <tr>
                                     <td>
-                                        @if (!string.IsNullOrEmpty(item.Team.LogoPath))
+                                        @if (!string.IsNullOrEmpty(item.Team.LogoFullPath))
                                         {
-                                            <img src="@Url.Content(item.Team.LogoPath)" alt="Image" style="width:50px;height:50px;max-width: 100%; height: auto;" />
+                                            <img src="@Url.Content(item.Team.LogoFullPath)" alt="Image" style="width:50px;height:50px;max-width: 100%; height: auto;" />
                                         }
                                     </td>
                                     <td>
@@ -198,9 +198,9 @@
                                         @Html.DisplayFor(modelItem => item.DateLocal)
                                     </td>
                                     <td>
-                                        @if (!string.IsNullOrEmpty(item.Local.LogoPath))
+                                        @if (!string.IsNullOrEmpty(item.Local.LogoFullPath))
                                         {
-                                            <img src="@Url.Content(item.Local.LogoPath)" alt="Image" style="width:50px;height:50px;max-width: 100%; height: auto;" />
+                                            <img src="@Url.Content(item.Local.LogoFullPath)" alt="Image" style="width:50px;height:50px;max-width: 100%; height: auto;" />
                                         }
                                     </td>
                                     <td>
@@ -212,7 +212,7 @@
                                     <td>
                                         @if (!string.IsNullOrEmpty(item.Visitor.LogoPath))
                                         {
-                                            <img src="@Url.Content(item.Visitor.LogoPath)" alt="Image" style="width:50px;height:50px;max-width: 100%; height: auto;" />
+                                            <img src="@Url.Content(item.Visitor.LogoFullPath)" alt="Image" style="width:50px;height:50px;max-width: 100%; height: auto;" />
                                         }
                                     </td>
                                     <td>

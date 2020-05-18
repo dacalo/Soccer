@@ -42,5 +42,22 @@ namespace Soccer.Web.Helpers
             return $"~/images/{folder}/{file}";
         }
 
+        public async Task<string> UploadBlobAsync(string image, string containerName)
+        {
+            Stream stream2 = File.OpenRead(image);
+            string guid = Guid.NewGuid().ToString();
+            string file = $"{guid}.jpg";
+            string path = Path.Combine(
+                Directory.GetCurrentDirectory(),
+                $"wwwroot\\images\\{containerName}",
+                file);
+
+            using (FileStream stream = new FileStream(path, FileMode.Create))
+            {
+                await stream2.CopyToAsync(stream);
+            }
+
+            return $"~/images/{containerName}/{file}";
+        }
     }
 }

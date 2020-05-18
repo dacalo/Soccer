@@ -52,9 +52,9 @@
                                     @Html.DisplayFor(modelItem => item.EndDateLocal)
                                 </td>
                                 <td>
-                                    @if (!string.IsNullOrEmpty(item.LogoPath))
+                                    @if (!string.IsNullOrEmpty(item.LogoFullPath))
                                     {
-                                        <img src="@Url.Content(item.LogoPath)" alt="Image" style="width:100px;height:100px;max-width: 100%; height: auto;" />
+                                        <img src="@Url.Content(item.LogoFullPath)" alt="Image" style="width:100px;height:100px;max-width: 100%; height: auto;" />
                                     }
                                 </td>
                                 <td>

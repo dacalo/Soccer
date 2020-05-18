@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Soccer.Common.Helpers;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
@@ -37,6 +38,11 @@ namespace Soccer.Web.Models
 
         [Display(Name = "Imagen")]
         public string PicturePath { get; set; }
+
+        [Display(Name = "Imagen")]
+        public string PictureFullPath => string.IsNullOrEmpty(PicturePath)
+        ? Constants.Path.PathNoImage
+        : Constants.URL_BASE + PicturePath.Substring(1);
 
         [Required(ErrorMessage = "El campo {0} es obligatorio.")]
         [Display(Name = "Equipo favorito")]

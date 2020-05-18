@@ -3,6 +3,7 @@ using System.ComponentModel.DataAnnotations;
 using Soccer.Common.Enums;
 using System.Collections.Generic;
 using System.Linq;
+using Soccer.Common.Helpers;
 
 namespace Soccer.Web.Data.Entities
 {
@@ -29,6 +30,11 @@ namespace Soccer.Web.Data.Entities
         [Display(Name = "Imagen")]
         public string PicturePath { get; set; }
 
+        [Display(Name = "Imagen")]
+        public string PictureFullPath => string.IsNullOrEmpty(PicturePath)
+        ? Constants.Path.PathNoImage
+        : Constants.URL_BASE + PicturePath.Substring(1);
+            
         [Display(Name = "Tipo de Usuario")]
         public UserType UserType { get; set; }
 

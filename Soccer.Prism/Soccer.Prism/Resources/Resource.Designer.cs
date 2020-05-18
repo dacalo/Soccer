@@ -115,6 +115,15 @@ namespace Soccer.Prism.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Users created by social networks, must change the photo or password on the social network..
+        /// </summary>
+        public static string ChangePhotoNoSoccerUser {
+            get {
+                return ResourceManager.GetString("ChangePhotoNoSoccerUser", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Close.
         /// </summary>
         public static string Closed {
@@ -403,6 +412,15 @@ namespace Soccer.Prism.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Login With Facebook.
+        /// </summary>
+        public static string LoginFacebook {
+            get {
+                return ResourceManager.GetString("LoginFacebook", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Logout.
         /// </summary>
         public static string Logout {
@@ -646,6 +664,15 @@ namespace Soccer.Prism.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Picture.
+        /// </summary>
+        public static string Picture {
+            get {
+                return ResourceManager.GetString("Picture", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Where do you want to take the picture?.
         /// </summary>
         public static string PictureSource {
@@ -673,6 +700,15 @@ namespace Soccer.Prism.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Positions.
+        /// </summary>
+        public static string Positions {
+            get {
+                return ResourceManager.GetString("Positions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Prediction.
         /// </summary>
         public static string Prediction {
@@ -687,6 +723,15 @@ namespace Soccer.Prism.Resources {
         public static string PredictionsFor {
             get {
                 return ResourceManager.GetString("PredictionsFor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Ranking.
+        /// </summary>
+        public static string Ranking {
+            get {
+                return ResourceManager.GetString("Ranking", resourceCulture);
             }
         }
         
@@ -741,6 +786,15 @@ namespace Soccer.Prism.Resources {
         public static string Save {
             get {
                 return ResourceManager.GetString("Save", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Search a user name....
+        /// </summary>
+        public static string SearchUserPlaceHolder {
+            get {
+                return ResourceManager.GetString("SearchUserPlaceHolder", resourceCulture);
             }
         }
         

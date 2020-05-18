@@ -1,4 +1,5 @@
 ﻿using Soccer.Common.Enums;
+using Soccer.Common.Helpers;
 
 namespace Soccer.Common.Models
 {
@@ -25,8 +26,8 @@ namespace Soccer.Common.Models
         //    : LoginType == LoginType.Soccer ? $"https://SoccerWeb0.azurewebsites.net{PicturePath.Substring(1)}" : PicturePath;
 
         public string PictureFullPath => string.IsNullOrEmpty(PicturePath)
-            ? "http://10.1.114.74:84//images/noimage.png"
-            : LoginType == LoginType.Soccer ? $"http://10.1.114.74:84{PicturePath.Substring(1)}" : PicturePath;
+            ? Constants.Path.PathNoImage
+            : $"{Constants.URL_BASE}{PicturePath.Substring(1)}";
 
         public LoginType LoginType { get; set; }
         public UserType UserType { get; set; }

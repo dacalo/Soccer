@@ -159,5 +159,14 @@ namespace Soccer.Prism.Helpers
         public static string PredictionsFor => Resource.PredictionsFor;
         public static string Pending => Resource.Pending;
 
+        public static string SearchUserPlaceHolder => Resource.SearchUserPlaceHolder;
+
+        public static string Ranking => Resource.Ranking;
+
+        public static string Positions => Resource.Positions;
+
+        public static string Picture => Resource.Picture;
+
+
     }
 }

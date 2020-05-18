@@ -23,9 +23,9 @@
         </form>
     </div>
     <div class="col-md-4">
-        @if (!string.IsNullOrEmpty(Model.PicturePath))
+        @if (!string.IsNullOrEmpty(Model.PictureFullPath))
         {
-            <img src="@Url.Content(Model.PicturePath)" alt="Image" style="width:300px;height:300px;max-width: 100%; height: auto;" />
+            <img src="@Url.Content(Model.PictureFullPath)" alt="Image" style="width:300px;height:300px;max-width: 100%; height: auto;" />
         }
     </div>
 </div>
